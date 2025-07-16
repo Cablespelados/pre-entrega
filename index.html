@@ -10,7 +10,7 @@
 <body>
   <header>
     <img src="media/img/logo_warcry.png" alt="Logo de la banda, de colores rojo y negro" width="100%" height="40%">
-     <nav>
+     <nav id="nav">
         <ul class="flex-links">
             <li><a href="#biografia">Biografía</a></li>
             <li><a href="#discografia">Discrografía</a></li>
@@ -29,6 +29,8 @@
     <p class="bio-text">En 2007, la agrupación recibió varios de los reconocimientos más importantes del mundo del rock, tal como el Rockferéndum (votación llevada a cabo por los lectores de las revistas Kerrang! y Heavy Rock) o el MetalZone.</p>    
     <p class="bio-text">A principios de 2020, WarCry emitió un comunicado en sus redes sociales anunciando un parón indefinido de la banda, donde no descartaban una posible disolución. Su último concierto fue dado el 15 de febrero de ese mismo año en el Escena Rock Madrid Fest, posteriormente, la cuenta oficial de WarCry en Twitter publicaría un “Hasta luego” tristemente recibido por sus seguidores.</p>
     <p class="bio-text">Dos años más tarde, en 2022, y para alegría de todos sus fans, la banda anunció su regreso en redes sociales, junto al nuevo álbum: Daimon, publicado el 21 de octubre de 2022. </p>
+
+    <button onclick="location.href='#nav'" class="btn-volver-nav">Inicio</button>
 </header>
 
 <main>
@@ -136,6 +138,7 @@
             </div>
         </div>
     </section>
+    <button onclick="location.href='#nav'" class="btn-volver-nav">Inicio</button>
     <section>
         <h2 class="form-titulo" id="galeria">Galería</h2>
         <p class="texto">Algunas imágenes de la banda:</p>
@@ -149,7 +152,10 @@
                     <figcaption>Warcry en un concierto Sinfónico en Castellón.</figcaption>
             </figure>
         </div>
+
+    <button onclick="location.href='#nav'" class="btn-volver-nav">Inicio</button>
     </section>
+
     <section>
         <h2 class="proximas-fechas">Próximas fechas</h2>
         <p class="texto">Estas son las próximas fechas de conciertos de la banda Warcry:</p>
@@ -159,19 +165,25 @@
             <li>4 de junio de 2025 - Ciudad: Pueble - Lugar: Auditorio Explanada</li>
             <li>5 de junio de 2024 - Ciudad: Querétaro - Lugar: Club Latino</li></ul>
     </section>
-
     <section>
         <form class="form-section" id="formulario">
             <p class="text-me1">FORMULARIO</p>
-            <p class="text-me">Si tienes alguna inquietud, quieres contarme alguna anécdota o compartir algo alusivo a la banda, puedes hacerlo a través de este formulario:</p>
+            <p class="text-me">Si tienes alguna inquietud, quieres contarme alguna anécdota o compartir algo alusivo a la banda, puedes hacerlo a través de este formulario. No te olvides de dejarme tu dirección de email en el mensaje!:</p>
             <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-            <input type="email" name="mail" id="mail" placeholder="Correo electrónico" required>            
-            <textarea name="mensaje" id="mensaje" rows="10" placeholder="Mensaje..." required></textarea>
+            <input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+            <input type="number" name="edad" id="edad" placeholder="Edad" required min="7" max="500">
+            <textarea name="mensajeUsuario" id="mensajeUsuario" rows="10" placeholder="Ingrese su  mensaje..." required></textarea>
             <input type="button" value="Enviar" id="enviar">
+            <input type="reset" value="Limpiar" id="limpiar">
         </form>
-    </section>
+
+        <div id="mensaje" class="mensaje"></div>
+</section>
+    
 </main>
   
+<button onclick="location.href='#nav'" class="btn-volver-nav">Inicio</button>
+
 <footer>
     <div class="footer-social" id="sigueme">
         <span class="sigueme-titulo">Sígueme en mis redes sociales:</span>
@@ -198,8 +210,10 @@
             <i class="fab fa-youtube"></i>
         </a>
     </div>
+    <button onclick="location.href='#nav'" class="btn-volver-nav">Inicio</button>
     <p>© 2025 WarCry Fanpage</p>
     
 </footer>
+<script src="js/formulario.js"></script>
 </body>
 </html>

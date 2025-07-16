@@ -149,6 +149,17 @@ a:hover {
     margin: 0 0 1.5em 0;
     font-size: 1.1em;
     color: #f0ecec;
+    word-break: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.proximas-fechas {
+    color: rgb(110, 4, 4);
+    font-size: 1.8em;
+    padding: 3%;
+    word-break: break-word;
+    max-width: 100%;
 }
 
 .form-section {
@@ -186,7 +197,8 @@ a:hover {
     background: #3a2323;
 }
 
-.form-section input[type="button"] {
+.form-section input[type="button"]
+.form-section input[type="reset"] {
     background-color: #8E0000;
     color: #fff;
     border: none;
@@ -199,8 +211,9 @@ a:hover {
     margin-top: 10px;
 }
 
-.form-section input[type="button"]:hover {
-    background-color: #f37575;
+.form-section input[type="button"]:hover,
+.form-section input[type="reset"]:hover {
+    background-color: #881a1a;
     color: #000;
 }
 
@@ -264,36 +277,69 @@ footer {
     font-size: 1.1em;
     text-decoration: none;
     font-family: 'New Rocker', Verdana, Geneva, Tahoma, sans-serif;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    background: #8E0000;           
+    border: 2px solid #420808;    
+    box-shadow: 0 2px 8px rgba(142,0,0,0.15);
 }
+
+.btn-social:hover {
+    background: #881a1a;           
+    color: #ffd6d6;                
+    border-color: #d83939;         
+    box-shadow: 0 4px 16px rgba(142,0,0,0.25);
+}
+
+.btn-social.facebook { background: #1877F2; border-color: #420808; }
+.btn-social.facebook:hover { background: #145db2; color: #fff; border-color: #d83939; }
+
+.btn-social.twitter { background: #1DA1F2; border-color: #420808; }
+.btn-social.twitter:hover { background: #0d8ddb; color: #fff; border-color: #d83939; }
+
+.btn-social.youtube { background: #FF0000; border-color: #420808; }
+.btn-social.youtube:hover { background: #b16b6b; color: #fff; border-color: #d83939; }
 
 .btn-social.whatsapp {
     background: #25D366;
+    border-color: #420808;
+}
+.btn-social.whatsapp:hover {
+    background: #128c4b;
+    color: #fff;
+    border-color: #d83939;
 }
 
 .btn-social.instagram {
     background: linear-gradient(45deg, #E1306C, #FD1D1D);
+    border-color: #420808;
 }
-
-.oficiales-titulo {
-    color: #af0606;
-    font-size: 1em;
-    margin-right: 12px;
-    font-family: 'New Rocker', Verdana, Geneva, Tahoma, sans-serif;
-    align-self: center;
+.btn-social.instagram:hover {
+    background: linear-gradient(45deg, #b3134a, #a10707);
+    color: #fff;
+    border-color: #d83939;
 }
-
-.btn-social.facebook { background: #1877F2; }
-.btn-social.facebook:hover { background: #145db2; }
-
-.btn-social.twitter { background: #1DA1F2; }
-.btn-social.twitter:hover { background: #0d8ddb; }
-
-.btn-social.youtube { background: #FF0000; }
-.btn-social.youtube:hover { background: #b16b6b; }
 
 footer p {
     margin-top: 25px;
+}
+
+.btn-volver-nav {
+    margin: 20px auto 0 auto;
+    display: block;
+    background-color: #8E0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 24px;
+    font-size: 1.1em;
+    font-family: 'New Rocker', Arial, sans-serif;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: auto;
+}
+.btn-volver-nav:hover {
+    background-color: #881a1a;
+    color: #000;
 }
 
 @media only screen and (max-width: 600px) {
@@ -313,6 +359,20 @@ footer p {
         align-items: center;
     }
 
+    .fechas-conciertos {
+        font-size: 1em;
+        padding: 2% 2%;
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    .proximas-fechas {
+        font-size: 1.2em;
+        padding: 4% 2% 2% 2%;
+        text-align: center;
+        max-width: 100%;
+    }
+
     .form-section {
         background-color: #420808;
         color: rgb(12, 2, 2);
@@ -329,5 +389,11 @@ footer p {
         margin-right: 0;
         margin-bottom: 6px;
         text-align: center;
+    }
+
+        .btn-volver-nav {
+            width: auto;
+            margin: 20px auto;
+            font-size: 1.2em;
     }
 }
